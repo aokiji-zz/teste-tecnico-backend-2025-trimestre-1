@@ -1,4 +1,4 @@
-# 1 - Para iniciar a API recomendável que rode docker-compose up dentro da pasta "pago-api"
+# 1 - Para iniciar a API recomendável que rode "docker-compose up --build" dentro da pasta "pago-api"
 
 
 # 2 - Dentro do container da API rode "npx prisma migrate dev" para criar a migration e inicializar o banco
