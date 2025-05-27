@@ -1,7 +1,7 @@
 # 1 - Para iniciar a API recomendável que rode docker-compose up dentro da pasta "pago-api"
 
 
-# 2 - Dentro do container da API rode npx prisma migrate dev para criar a migration e inicializar o banco
+# 2 - Dentro do container da API rode "npx prisma migrate dev" para criar a migration e inicializar o banco
 
 
 # 3 - Para iniciar o front-end, dentro da pasta pago-web rode "yarn start" após instalar as dependências com "yarn install"
