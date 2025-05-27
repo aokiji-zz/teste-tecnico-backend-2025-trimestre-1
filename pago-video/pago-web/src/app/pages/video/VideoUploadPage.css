@@ -1,0 +1,62 @@
+body * {
+  background-color:  #2a2a3b;
+  font-family: 'Courier New', monospace;
+}
+
+.container {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.card {
+  background-color: #2a2a3b;
+  border-radius: 16px;
+  border: 1px solid #4c8af0;
+  box-shadow: 0 0 10px rgba(76, 138, 240, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.card input[type="file"] {
+  border: 1px solid #4c8af0;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card input[type="file"]::file-selector-button {
+  background-color: #4c8af0;
+  border: none;
+  padding: 6px 12px;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card input[type="file"]::file-selector-button:hover {
+  background-color: #6c9eff;
+}
+
+.card .btn {
+  margin-top: 15px;
+  background-color: #4c8af0;
+  color: #fff;
+  border: none;
+}
+
+.card .btn:hover {
+  background-color: #5a82d3;
+}
+
+.success-message {
+  color: #7cf57c;
+}
+
+.error-message {
+  color: #f26c6c;
+}

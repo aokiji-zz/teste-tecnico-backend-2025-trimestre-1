@@ -1,0 +1,1 @@
+export const urlBaseApiDev = 'http://172.21.0.4:8735'

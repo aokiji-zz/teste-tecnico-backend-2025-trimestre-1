@@ -1,0 +1,42 @@
+# docker-compose.yml
+
+version: '3.8'
+services:
+
+  # Docker connection string: postgres://postgres:postgres@localhost:5432/
+
+  postgres:
+    image: postgres:13.5
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5434:5432'
+  redis:
+    image: redis
+    environment:
+      - REDIS_HOST=REDIS_HOST
+      - REDIS_PORT=6379
+    ports:
+      - '6381:6379'
+  
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - '8735:8735'
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  postgres:
