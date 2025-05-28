@@ -11,12 +11,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ buffer: filename }) => {
 
   useEffect(() => {
     if (filename) {
-      // Cria um Blob a partir do buffer e gera um URL utilizável
       const blob = new Blob([filename], { type: 'video/mp4' });
       const url = URL.createObjectURL(blob);
       setVideoUrl(url);
 
-      // Limpa o URL quando o componente é desmontado
       return () => URL.revokeObjectURL(url);
     }
   }, [filename]);
