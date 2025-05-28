@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { urlBaseApiDev } from '../common/base-url';
 
 interface VideoPlayerProps {
-  buffer: string; // Alterado para ArrayBuffer para compatibilidade
+  buffer: string; 
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ buffer: filename }) => {
